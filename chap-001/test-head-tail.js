@@ -9,6 +9,7 @@ function Node(value, next, prev) {
     this.prev = prev;
 }
 
+// Creating Head Nodes
 LinkedList.prototype.addToHead = function(value) { 
     var newNode = new Node(value, this.head, null);
     if (this.head) this.head.prev = newNode;
@@ -16,6 +17,7 @@ LinkedList.prototype.addToHead = function(value) {
     this.head = newNode;  
 };
 
+// Creating Tail Nodes
 LinkedList.prototype.addToTail = function(value) {
     var newNode = new Node(value, null, this.tail);
     if (this.tail) this.tail.next = newNode;
